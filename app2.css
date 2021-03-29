@@ -1,0 +1,44 @@
+@font-face {
+    font-family: ProximaNova;
+    src: url(./fonts/ProximaNovaRegular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(./fonts/ProximaNovaBold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url(./fonts/SourceSansPro-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url(./fonts/SourceSansPro-Bold.ttf);
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    font-family: 'SourceSansPro', serif;
+}
+
+.toptopbar {
+    grid-template-columns: 100px;
+}
+
+.featured p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.try {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
