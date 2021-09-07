@@ -1,284 +1,362 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="app2.css" rel='stylesheet' />
     <link href="dist/styles.css" rel='stylesheet' />
-    <link rel="stylesheet" href=app2.css>
+    <link rel="stylesheet" href=tailwind.css>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
-    <header>
-        <div class="bg-no-repeat bg-bottom bg-cover sm:h-480  lg:h-750" style="background-image:  url('./images/bg.png');">
-            <div class="container my-0 mx-auto md:w-600 lg:w-920 xl:1240">
-                <div class="topbar text-white">
-                    <div class="toptopbar  grid w-550 absolute ">
-                        <div class="toptopbar-item item-1 col-start-1 col-end-1 pt-46 pl-23">
-                            <p class="notspecial align-top my-0 font-bold pl-21 sm:text-10 lg:text-12">ΑΡΚΑΔΙΑ</p>
-                            <p class="special align-top my-0 text-18">
+<body class="overflow-x-hidden">
+    <div class="scrbar overflow-x-hidden">
+        <header class="bg-no-repeat bg-bottom bg-cover sm:h-480  lg:h-750" style="background-image:  url('./images/bg.png');">
+            <div class="hamburger-menu absolute lg:hidden">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn flex items-center fixed top-10 right-10 w-24 h-24 cursor-pointer z-10" for="menu__toggle">
+                    <span></span>
+                </label>
+                <input id="menu__toggle2" type="checkbox" />
+                <label class="menu__btn2 flex items-center fixed top-20 left-20 w-20 h-20 cursor-pointer z-20 invisible" for="menu__toggle2">
+                    <span class="text-bluee flex text-14 m-0 width-10"><i class="fa fa-angle-left mr-5 mt-4" aria-hidden="true "></i>Επιστροφη</span>
+                </label>
+                <ul class="menu__box block fixed invisible top-0 w-300 m-0 pt-45 pb-45 pl-0 pr-0 no-underline bg-white z-10" id="testingla">
+                    <label class="submenu__btn flex items-center fixed top-10 right-266 w-22 h-22 cursor-pointer z-10" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <div class="submenu__flag flex items-center fixed top-13 right-10">
+                        <svg class="mr-5" width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="28" height="18" fill="white" />
+                            <rect width="4" height="4" fill="#005E96" />
+                            <rect x="6" width="4" height="4" fill="#005E96" />
+                            <rect x="6" y="6" width="4" height="4" fill="#005E96" />
+                            <rect y="6" width="4" height="4" fill="#005E96" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M28 0H10V2H28" fill="#005E96" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M28 4V6H10V4H28Z" fill="#005E96" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M28 8H10V10H28V8Z" fill="#005E96" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M28 12V14H0V12H28Z" fill="#005E96" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M28 16V18H0V16H28Z" fill="#005E96" />
+                        </svg>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="submenu__reg text-center text-14 font-bold text-bluee">
+                        <i class="fa fa-user-o fa-lg h-24 w-24"></i>
+                        <span>Εγγραφή / Σύνδεση</span>
+                    </div>
+                    <hr />
+                    <div class="puzzle">
+                        <li class="mt-20 ml-20">
+                            <label class="menu__li inline-block cursor-pointer select-none" for="menu__toggle2"><span class="font-bold text-14 no-underline text-bluee hover:text-redd">ΟΜΟΝΣΠΟΝΔΙΑ</span></label>
+                            <i class="fa fa-angle-right float-right mr-20 text-bluee" aria-hidden="true"></i>
+                        </li class="mt-20 ml-20">
+                        <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">ΑΡΚΑΔΩΝ ΕΡΓΑ</a><i class="fa fa-angle-right float-right mr-20 text-bluee" aria-hidden="true "></i></li>
+
+                        <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">ΕΠΩΝΥΜΟΙ ΑΡΚΑΔΕΣ</a><i class="fa fa-angle-right float-right mr-20 text-bluee" aria-hidden="true "></i>
+                        </li>
+                        <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">ΝΕΑ-ΕΝΗΜΕΡΩΣΗ</a><i class="fa fa-angle-right float-right mr-20 text-bluee" aria-hidden="true "></i></li>
+                        <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">ΕΠΙΣΚΕΨΗ ΣΤΗΝ ΑΡΚΑΔΙΑ</a><i class="fa fa-angle-right float-right mr-20 text-bluee" aria-hidden="true "></i></li>
+                        <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">ΑΝΑΖΗΤΗΣΕΙΣ ΣΤΗΝ ΑΡΚΑΔΙΑ</a><i class="fa fa-angle-right float-right mr-20 text-bluee" aria-hidden="true "></i></li>
+                        <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">EΠΙΚΟΙΝΩΝΙΑ</a><i class="fa fa-angle-right float-right mr-20 text-bluee" aria-hidden="true "></i></li>
+                    </div>
+                </ul>
+                <ul class="menu__box2 block fixed invisible top-0 w-300 pt-60 pb-60 no-underline bg-white z-10">
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Ιστορία</a></li>
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Διοικητικό Συμβούλιο</a></li>
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Πρόεδρος - Βιογραφικό Σημείωμα</a></li>
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Μήνυμα Προέδρου</a></li>
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Districts</a></li>
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Διατελεσαντες Προέδροι</a></li>
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Αποστολή - Αξίες</a></li>
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Πορεία - Εξέλιξη</a></li>
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Ο Έλληνας πρέσβης στην Ουάσιγκτον</a></li>
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Ο Πρέσβης ΗΠΑ στην Αθήνα</a></li>
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Ο Οικουμενικός Πατριάρχης</a></li>
+                    <li class="mt-20 ml-20"><a class="text-bluee font-bold  text-14 no-underline hover:text-redd" href="#">Ο Αρχιεπίσκοπος Αμερικής</a></li>
+
+                </ul>
+            </div>
+            <div class="container my-0 mx-auto md:w-600 lg:w-920 xl:w-1240">
+                <div class="topbar text-white lg:h-70 lg:pt-14 lg:pl-240">
+
+                    <div class="toptopbar  grid w-550 absolute lg:w-900 xl:w-1078">
+                        <div class="toptopbar-item item-1 col-start-1 col-end-1 pt-46 pl-23 lg:p-0">
+                            <p class="notspecial align-top my-0 font-bold pl-21 sm:text-10 lg:text-12 lg:pl-35px">
+                                ΑΡΚΑΔΙΑ</p>
+                            <p class="special align-top my-0 text-18 font-normal lg:text-30">
                                 <i class="fa fa-clock-o" aria-hidden="true"></i> 13:28
                             </p>
                         </div>
-                        <div class="toptopbar-item item-2 col-start-4 col-end-4 pt-46 pl-23">
-                            <p class="notspecial align-top my-0 font-bold sm:text-10 lg:text-12">ΚΑΤΑΙΓΙΔΑ</p>
-                            <p class="special align-top my-0">
-                                <i class="fa fa-cloud" aria-hidden="true"></i> 12&#8451;
-                                <span style="color: grey;">&#8457;</span>
+                        <div class="toptopbar-item item-2 col-start-4 col-end-4 pt-46 pl-23 md:col-start-13 md:col-end-13 lg:col-start-2 lg:col-end-2 lg:p-0 lg:pl-20 ">
+                            <p class="notspecial align-top my-0 font-bold sm:text-10 lg:text-12 lg:pl-35px">ΚΑΤΑΙΓΙΔΑ
+                            </p>
+                            <p class="special align-top my-0 text-18 font-normal lg:text-30">
+                                <i class=" fa fa-cloud " aria-hidden="true "></i> 12&#8451;
+                                <span style="color: grey; ">&#8457;</span>
                             </p>
                         </div>
-                        <div class="toptopbar-item item-3 hidden">
-                            <i class="fa fa-user-o fa-lg"></i>
-                            <span class="font-bold">Εγγραφή / Σύνδεση</span>
-                            <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="28" height="18" fill="white" />
-                                <rect width="4" height="4" fill="#005E96" />
-                                <rect x="6" width="4" height="4" fill="#005E96" />
-                                <rect x="6" y="6" width="4" height="4" fill="#005E96" />
-                                <rect y="6" width="4" height="4" fill="#005E96" />
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M28 0H10V2H28" fill="#005E96" />
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M28 4V6H10V4H28Z" fill="#005E96" />
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M28 8H10V10H28V8Z" fill="#005E96" />
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M28 12V14H0V12H28Z" fill="#005E96" />
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M28 16V18H0V16H28Z" fill="#005E96" />
+                        <div class="toptopbar-item item-3 hidden md:pl-410 lg:flex lg:col-start-3 lg:col-end-3 pt-10 lg:pl-0 xxl:pl-430">
+                            <i class="fa fa-user-o fa-lg "></i>
+                            <span class="font-bold text-14 no-underline mr-42 ml-5 mr-40">Εγγραφή / Σύνδεση</span>
+                            <svg width="28 " height="18 " viewBox="0 0 28 18 " fill="none " xmlns="http://www.w3.org/2000/svg ">
+                                <rect width="28 " height="18 " fill="white " />
+                                <rect width="4 " height="4 " fill="#005E96 " />
+                                <rect x="6 " width="4 " height="4 " fill="#005E96 " />
+                                <rect x="6 " y="6 " width="4 " height="4 " fill="#005E96 " />
+                                <rect y="6 " width="4 " height="4 " fill="#005E96 " />
+                                <path fill-rule="evenodd " clip-rule="evenodd " d="M28 0H10V2H28 " fill="#005E96 " />
+                                <path fill-rule="evenodd " clip-rule="evenodd " d="M28 4V6H10V4H28Z " fill="#005E96 " />
+                                <path fill-rule="evenodd " clip-rule="evenodd " d="M28 8H10V10H28V8Z "
+                                    fill="#005E96 " />
+                                <path fill-rule="evenodd " clip-rule="evenodd " d="M28 12V14H0V12H28Z "
+                                    fill="#005E96 " />
+                                <path fill-rule="evenodd " clip-rule="evenodd " d="M28 16V18H0V16H28Z "
+                                    fill="#005E96 " />
                             </svg>
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <i class="fa fa-angle-down ml-5" aria-hidden="true "></i>
 
 
                         </div>
                     </div>
                 </div>
 
-                <nav id="main rounded relative flex justify-center">
-                    <a href="/" class="logo block rounded-full  "><img src="logo.svg" alt="Logo" class="h-110 w-100 mx-auto py-10"></a>
+
+                <nav class="main rounded relative flex justify-center lg:bg-white  lg:block lg:h-60">
+                    <a href="/ " class="logo block rounded-full lg:absolute lg:border-10 lg:border-redd lg:rounded-full lg:left-50"><img src="logo.svg " alt="Logo " class="h-110 w-100 mx-auto py-10 lg:h-170 lg:w-170 lg:p-0"></a>
 
 
-                    <ul class="main-menu m-0 pt-0 pr-20 pb-0 pl-270 hidden items-center justify-between h-60 list-none">
-                        <li><a href="#" class="menu-item hover:text-redd hover:block "> ΟΜΟΝΣΠΟΝΔΙΑ</a>
-                            <div class="hide list-none absolute bg-whit t-70 w-275 h-365 pt-16 ">
-                                <ul class="tetris list-none pl-20 ">
-                                    <li><a href="# ">Ιστορία</a></li>
-                                    <li><a href="# ">Διοικητικό Συμβούλιο</a></li>
-                                    <li><a href="# ">Πρόεδρος - Βιογραφικό Σημείωμα</a></li>
-                                    <li><a href="# ">Μήνυμα Προέδρου</a></li>
-                                    <li><a href="# ">Districts</a></li>
-                                    <li><a href="# ">Διατελεσαντες Προέδροι</a></li>
-                                    <li><a href="# ">Αποστολή - Αξίες</a></li>
-                                    <li><a href="# ">Πορεία - Εξέλιξη</a></li>
-                                    <li><a href="# ">Ο Έλληνας πρέσβης στην Ουάσιγκτον</a></li>
-                                    <li><a href="# ">Ο Πρέσβης ΗΠΑ στην Αθήνα</a></li>
-                                    <li><a href="# ">Ο Οικουμενικός Πατριάρχης</a></li>
+                    <ul class="main-menu m-0 pt-0 pr-20 pb-0 pl-270 hidden flex items-center justify-between h-60 list-none md:pl-250 lg:flex xl:pr-40 xl:pl-300">
+                        <li class="m-15">
+                            <a href="# " class="menu-item hover:text-redd hover:block text-bluee text-12 font-bold">
+                                ΟΜΟΝΣΠΟΝΔΙΑ</a>
+                            <div class=" hide hidden list-none absolute bg-white t-70 w-275 h-365 pt-16 ">
+                                <ul class="tetris list-none pl-20 text-bluee text-14 font-bold">
+                                    <li class="pb-8"><a href="# ">Ιστορία</a></li>
+                                    <li class="pb-8"><a href="# ">Διοικητικό Συμβούλιο</a></li>
+                                    <li class="pb-8"><a href="# ">Πρόεδρος - Βιογραφικό Σημείωμα</a></li>
+                                    <li class="pb-8"><a href="# ">Μήνυμα Προέδρου</a></li>
+                                    <li class="pb-8"><a href="# ">Districts</a></li>
+                                    <li class="pb-8"><a href="# ">Διατελεσαντες Προέδροι</a></li>
+                                    <li class="pb-8"><a href="# ">Αποστολή - Αξίες</a></li>
+                                    <li class="pb-8"><a href="# ">Πορεία - Εξέλιξη</a></li>
+                                    <li class="pb-8"><a href="# ">Ο Έλληνας πρέσβης στην Ουάσιγκτον</a></li>
+                                    <li class="pb-8"><a href="# ">Ο Πρέσβης ΗΠΑ στην Αθήνα</a></li>
+                                    <li class="pb-8"><a href="# ">Ο Οικουμενικός Πατριάρχης</a></li>
                                     <li><a href="# ">Ο Αρχιεπίσκοπος Αμερικής</a></li>
 
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="# ">ΑΡΚΑΔΩΝ ΕΡΓΑ</a></li>
-                        <li><a href="# ">ΕΠΩΝΥΜΟΙ ΑΡΚΑΔΕΣ</a></li>
-                        <li><a href="# ">ΝΕΑ-ΕΝΗΜΕΡΩΣΗ</a></li>
-                        <li><a href="# ">ΕΠΙΣΚΕΨΗ ΣΤΗΝ ΑΡΚΑΔΙΑ</a></li>
-                        <li><a href="# ">ΑΝΑΖΗΤΗΣΕΙΣ ΣΤΗΝ ΑΡΚΑΔΙΑ</a></li>
-                        <li><i class="fa fa-envelope-o " aria-hidden="true "></i></li>
+                        <li class="m-15 "><a href="# " class="text-bluee text-12 font-bold ">ΑΡΚΑΔΩΝ ΕΡΓΑ</a></li>
+                        <li class="m-15 "><a href="# " class="text-bluee text-12 font-bold ">ΕΠΩΝΥΜΟΙ ΑΡΚΑΔΕΣ</a></li>
+                        <li class="m-15 "><a href="# " class="text-bluee text-12 font-bold ">ΝΕΑ-ΕΝΗΜΕΡΩΣΗ</a></li>
+                        <li class="m-15 "><a href="# " class="text-bluee text-12 font-bold ">ΕΠΙΣΚΕΨΗ ΣΤΗΝ ΑΡΚΑΔΙΑ</a>
+                        </li>
+                        <li class="m-15 "><a href="# " class="text-bluee text-12 font-bold ">ΑΝΑΖΗΤΗΣΕΙΣ ΣΤΗΝ
+                                ΑΡΚΑΔΙΑ</a></li>
+                        <li class="m-15 "><i class="fa fa-envelope-o " aria-hidden="true "></i></li>
                     </ul>
                 </nav>
                 <div class="ratt ">
-                    <img src="./images/rat.png " class="w-227 h-20 m-auto block ">
+                    <img src="./images/rat.png " class="w-227 h-20 m-auto block lg:w-262 lg:h-23 lg:mt-20 lg:ml-233 ">
                 </div>
-                <div class="featured bg bg-no-repeat bg-contain w-280 h-280 mt-30 mb-30 mx-auto border-2 border-whit rounded-full shadow-2xl text-center p-20 text-white " style="background-image: url( './images/circle.png'); ">
-                    <svg class="mx-auto" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M13.2214 0.000107481V8.7293H19.5107V4.48616H17.4535V6.60773H15.2786V2.12168H21.9428V10.9392H2.05716V2.12168H8.7215V6.60773H6.54647V4.48616H4.4893V8.7293H10.7786V0.000107481H0V10.9392V13.0608V24H10.7786V15.2708H4.4893V19.5137H6.54647V17.3922H8.7215V21.8784H2.05716V13.0608H21.9428V21.8784H15.2786V17.3922H17.4535V19.5137H19.5107V15.2708H13.2214V24H24V0.000107481H13.2214Z"
-                            fill="white" />
-                        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M13.2214 0.000107481V8.7293H19.5107V4.48616H17.4535V6.60773H15.2786V2.12168H21.9428V10.9392H2.05716V2.12168H8.7215V6.60773H6.54647V4.48616H4.4893V8.7293H10.7786V0.000107481H0V10.9392V13.0608V24H10.7786V15.2708H4.4893V19.5137H6.54647V17.3922H8.7215V21.8784H2.05716V13.0608H21.9428V21.8784H15.2786V17.3922H17.4535V19.5137H19.5107V15.2708H13.2214V24H24V0.000107481H13.2214Z"
-                                fill="white" />
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <rect width="24" height="24" fill="white" />
-                        </g>
-                    </svg>
+                <div class="featured bg bg-no-repeat bg-contain w-280 h-280 mt-30 mb-30 mx-auto border-2 border-whit rounded-full shadow-2xl text-center p-20 text-white lg:w-410 lg:h-410 lg:mt-27 lg:mx-auto lg:border-6 lg:border-whit " style="background-image:
+                                url( './images/circle.png'); ">
+                    <img src="./images/greek.png " class="block mx-auto h-18 w-18 lg:h-24 lg:w-24 ">
 
-                    <h3 class="text-12 mt-4 mb-15 font-bold ">ΚΑΛΩΣ ΗΛΘΑΤΕ</h3>
+                    <h3 class="text-12 mt-4 mb-15 font-bold lg:mt-10 lg:mb-30 lg:text-12 ">ΚΑΛΩΣ ΗΛΘΑΤΕ</h3>
 
-                    <h2 class="text-18 mb-14 font-bold ">Η αποστολή μας</h2>
-                    <p class="text-14 mb-10 leading-5 w-220 overflow-hidden overflow-ellipsis ">Ο Παναρκαδικής Ομοσπονδίας Αμερικής είναι μια πανεθνική μη κερδοσκοπικού αδελφό ελληνικό-αμερικανική οργάνωση τα μέλη της οποίας κατεβαίνουν από την περιοχή της Αρκαδίας στην Πελοπόννησο, στη νότια Ελλάδα …</p>
-                    <a class="rounded border-1 text-14 text-whit w-140 h-40 inline-flex self-center justify-center no-underline text-center " href="# ">ΠΕΡΙΣΣΟΤΕΡΑ</a>
+                    <h2 class="text-18 mb-14 font-bold lg:m-0 lg:mb-30 lg:text-24 ">Η αποστολή μας</h2>
+                    <p class="text-14 mb-10 leading-5 w-220 overflow-hidden overflow-ellipsis lg:text-16 lg:mx-auto lg:w-300 lg:mb-30 lg:leading-6 ">
+                        Ο Παναρκαδικής Ομοσπονδίας Αμερικής είναι μια πανεθνική μη κερδοσκοπικού αδελφό ελληνικό-αμερικανική οργάνωση τα μέλη της οποίας κατεβαίνουν από την περιοχή της Αρκαδίας στην Πελοπόννησο, στη νότια Ελλάδα …
+                    </p>
+                    <a class="rounded border-1 text-14 text-whit w-140 h-40 inline-flex self-center justify-center no-underline text-center lg:w-200 lg:w-50 " href="# ">ΠΕΡΙΣΣΟΤΕΡΑ</a>
                 </div>
             </div>
-        </div>
 
 
-    </header>
 
-    <section class="second bg-no-repeat bg-top h-750 " style="background-image: url( './images/tree.png'); ">
-        <div class="container2 my-0 mx-auto md:w-640 lg:w-920 xl:w-1280">
+        </header>
 
-            <div class="desc ">
-                <div class="pic2 ">
-                    <img class="h-70 mx-auto mt-20 mb-10" src="./images/colored.png ">
+        <section class="second lg:bg-no-repeat bg-top h-750" style="background-image: url( './images/tree.png'); ">
+            <div class="container3 my-0 mx-auto md:w-640 lg:w-960 xl:w-1030 ">
+
+                <div class="desc ">
+                    <div class="pic2 ">
+                        <img class="h-70 mx-auto mt-20 mb-10 lg:h-79 lg:w-45 lg:mt-40 lg:mb-21 " src="./images/colored.png ">
+                    </div>
+                    <div class="pic ">
+                        <img class="w-219 h-36 mx-auto mb:h-38 w-235 lg:h-42 lg:w-255 " src="./images/roots.png ">
+                    </div>
+
+                    <h1 class=" text-34 text-redd font-bold m-auto w-250 text-center mt-30 mb-14 lg:text-48 lg:mt-40 lg:mb-40 lg:w-full ">
+                        Μετριόμαστε, γιατί μετράμε!
+                    </h1>
+
+
                 </div>
-                <div class="pic ">
-                    <img class="w-219 h-36 mx-auto" src="./images/roots.png ">
+                <div class="tat m-0 w-full lg:w-960 ">
+                    <div class=" firstsec lg:float-left ">
+                        <h2 class="text-18 text-bluee font-bold w-300 text-center mx-auto mb-20 lg:text-justify lg:w-430 lg:mb-20 xl:w-460 ">
+                            Γενική απογραφή των αποδήμων Αρκάδων στις ΗΠΑ και επαναπατρισθέντων από τις ΗΠΑ</h2>
+                        <p class="text-16 font-normal text-grey w-280 text-center mx-auto lg:text-justify lg:w-430 xl:w-460 ">
+                            Η Παναρκαδική Ομοσπονδία Αμερικής πραγματοποιεί απογραφή των Αρκάδων που διαμένουν και εργάζονται στις ΗΠΑ, (ανεξαρτήτως υπηκότητας). </p>
+                        <h3 class="text-16 font-bold text-grey w-300 text-center mx-auto mb-10 lg:text-justify lg:w-430 lg:mb-15 lg:mt-10 xl:w-460 ">
+                            Το αποτύπωμα της Αρκαδικής γης μας συνδέει!</h3>
+                        <p class="try text-16 font-normal text-grey w-280 text-center mx-auto overflow-hidden overflow-ellipsis lg:text-justify lg:w-430 xl:w-460 ">
+                            Όση χιλιομετρική απόσταση και αν μας χωρίζει, όσες γενιές και να έχουμε...ψηλώσει πέρα απο τις ρίζες μας, η Αρκαδία, μας ενώνει!</p>
+                    </div>
+                    <div class="secondsec float-right w-500 hidden lg:block ">
+                        <h2 class="text-bluee font-bold text-18 mt-0 mb-15 pl-30 ">Απογραφόμαστε...</h2>
+                        <ul class="no-underline text-16 pl-50 ">
+                            <li class="block relative pb-10 ">Για να γνωρίσουμε ο ένας τον άλλο.</li>
+                            <li class="block pb-10 relative ">Για να αντλήσουμε δύναμη απο τις ρίζες μας και την καταγωγή μας.
+                            </li>
+                            <li class="block pb-10 relative ">Για να είμαστε χρήσιμοι και να παρεμβαίνουμε δημιουργικά για τις ΗΠΑ την Ελλάδα και την Αρκαδία.
+                            </li>
+                            <li class="block relative pb-10 ">Για να υλοποιήσουμε τα σχέδια και τα οραματά μας.</li>
+                            <li class="block relative pb-10 ">Για να είμαστε ισχυροί.</li>
+                        </ul>
+                    </div>
                 </div>
+                <div class="secondsecond clear-both ">
+                    <h3 class="text-18 text-redd font-bold text-center m-0 mt-30 lg:pt-30 ">ΤΕΛΕΤΗ ΕΝΑΡΞΗΣ</h3>
+                    <h1 class="text-24 text-bluee font-bold w-200 text-center mx-auto mt-9 mb-12 lg:text-34 lg:w-full lg:text-center lg:mt-5 lg:mb-9 ">
+                        Παρασκευή 20 Απριλίου 2108
+                    </h1>
+                    <h4 class="text-18 text-bluee font-bold text-center m-0 mb-38 ">ΝΕΑ ΥΟΡΚΗ</h4>
 
-                <h1 class=" text-34 text-redd font-bold m-auto w-250 text-center mt-30 mb-14 ">Μετριόμαστε, γιατί μετράμε!
-                </h1>
-
-
+                </div>
             </div>
-            <div class="tat m-0 w-full ">
-                <div id="firstsec ">
-                    <h2 class="text-18 text-bluee font-bold w-300 text-center mx-auto mb-20 ">Γενική απογραφή των αποδήμων Αρκάδων στις ΗΠΑ και επαναπατρισθέντων από τις ΗΠΑ</h2>
-                    <p class="text-16 font-normal text-grey w-280 text-center mx-auto ">Η Παναρκαδική Ομοσπονδία Αμερικής πραγματοποιεί απογραφή των Αρκάδων που διαμένουν και εργάζονται στις ΗΠΑ, (ανεξαρτήτως υπηκότητας). </p>
-                    <h3 class="text-16 font-bold text-grey w-300 text-center mx-auto mb-10 ">Το αποτύπωμα της Αρκαδικής γης μας συνδέει!</h3>
-                    <p class="try text-16 font-normal text-grey w-280 text-center mx-auto overflow-hidden overflow-ellipsis ">
-                        Όση χιλιομετρική απόσταση και αν μας χωρίζει, όσες γενιές και να έχουμε...ψηλώσει πέρα απο τις ρίζες μας, η Αρκαδία, μας ενώνει!</p>
-                </div>
-                <div class="secondsec float-right w-500 mr-139 hidden ">
-                    <h2>Απογραφόμαστε...</h2>
-                    <ul>
-                        <li>Για να γνωρίσουμε ο ένας τον άλλο.</li>
-                        <li>Για να αντλήσουμε δύναμη απο τις ρίζες μας και την καταγωγή μας.</li>
-                        <li>Για να είμαστε χρήσιμοι και να παρεμβαίνουμε δημιουργικά για τις ΗΠΑ την Ελλάδα και την Αρκαδία.
-                        </li>
-                        <li>Για να υλοποιήσουμε τα σχέδια και τα οραματά μας.</li>
-                        <li>Για να είμαστε ισχυροί.</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="secondsecond ">
-                <h3 class="text-18 text-red font-bold text-center m-0 mt-5 ">ΤΕΛΕΤΗ ΕΝΑΡΞΗΣ</h3>
-                <h1 class="text-24 text-bluee font-bold w-200 text-center mx-auto mt-9 mb-12 ">Παρασκευή 20 Απριλίου 2108
-                </h1>
-                <h4 class="text-18 text-bluee font-bold text-center m-0 mb-38 ">ΝΕΑ ΥΟΡΚΗ</h4>
 
-            </div>
+        </section>
 
+        <section class="third w-full p-20 bg-blue-450 ">
 
-    </section>
-
-    <section class="third h-600 pt-40 bg-blue-450">
-        <div class="container2 ">
-            <div id="third3 ">
+            <div class="third3 ">
                 <img src="./images/greek.png " class="block mx-auto ">
-                <h4 class="text-12 text-whit font-bold mx-0 mt-10 mb-30 text-center ">ΕΡΓΑ & ΔΡΑΣΤΗΡΙΟΤΗΤΕΣ</h4>
+                <h4 class="text-12 text-whit font-bold mx-auto mt-10 mb-30 text-center ">ΕΡΓΑ & ΔΡΑΣΤΗΡΙΟΤΗΤΕΣ</h4>
+            </div>
+            <div class="container2 flex min-w-260 ml-15 md:w-640 lg:w-920 xl:w-1280 xxl:mx-auto ">
+                <div class="erga mr-20 text-whit w-1/4 mb-20 min-w-260 max-w-300 ">
+                    <img src="./images/tripoli.png " class="w-full ">
+                    <h2 class="mt-20 mb-12 ">Γενικού Παναρκαδικό Νοσοκομείο Τρίπολης</h2>
+                    <p class="mb-5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
+                    <div class="bar mine w-24 border-b-3 border-red-600 inline-block m-0 "></div>
+                    <h4 class="mine inline-block m-0 text-12 text-whit font-bold text-center mx-0 mt-10 mb-30 ">ΠΕΡΙΣΣΟΤΕΡΑ
+                    </h4>
+                </div>
+                <div class="erga mr-20 text-whit w-1/4 mb-20 min-w-260 ">
+                    <img src="./images/leo.png " class="w-full ">
+                    <h2 class="mt-20 mb-12 "> Ο παραδοσιακός οικισμός του Λεωνιδίου</h2>
+                    <p class="mb-5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
+                    <div class="bar mine w-24 border-b-3 border-red-600 inline-block m-0 "></div>
+                    <h4 class="mine inline-block m-0 text-12 text-whit font-bold text-center mx-0 mt-10 mb-30 ">ΠΕΡΙΣΣΟΤΕΡΑ
+                    </h4>
+                </div>
+                <div class="erga mr-20 text-whit w-1/4 mb-20 min-w-260 ">
+                    <img src="./images/kunouria.png " class="w-full ">
+                    <h2 class="mt-20 mb-12 ">Κυνουρία, Εκεί που δεσπόζει ο Πάρνωνας</h2>
+                    <p class="mb-5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
+                    <div class="bar mine w-24 border-b-3 border-red-600 inline-block m-0 "></div>
+                    <h4 class="mine inline-block m-0 text-12 text-whit font-bold text-center mx-0 mt-10 mb-30 ">ΠΕΡΙΣΣΟΤΕΡΑ
+                    </h4>
+                </div>
+                <div class="erga mr-20 text-whit w-1/4 mb-20 min-w-260 ">
+                    <img src="./images/parka.png " class="w-full ">
+                    <h2 class="mt-20 mb-12 ">Οι ελληνικές πόλεις με τα καλύτερα πάρκα!</h2>
+                    <p class="mb-5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
+                    <div class="bar mine w-24 border-b-3 border-red-600 inline-block m-0 "></div>
+                    <h4 class=" mine inline-block m-0 text-12 text-whit font-bold text-center mx-0 mt-10 mb-30 ">ΠΕΡΙΣΣΟΤΕΡΑ
+                    </h4>
+                </div>
+            </div>
+            <div class="block text-center ">
+                <button class="buttonn rounded border-1 text-whit text-14 w-280 h-50 inline-flex justify-center block pt-14 lg:w-200 ">ΠΕΡΙΣΣΟΤΕΡΑ
+            </button>
             </div>
 
-            <div class="erga float-left ml-20 text-whit mb-20 ">
-                <img src="./images/tripoli.png " class="w-260 h-200 ">
-                <h2 class="w-300 ">Γενικού Παναρκαδικό Νοσοκομείο Τρίπολης</h2>
-                <p class="w-300 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
-                <div class="bar mine w-24 border-b-3 border-red-600 inline-block m-0 "></div>
-                <h4 class="mine inline-block m-0 text-12 text-whit font-bold text-center mx-0 mt-10 mb-30 ">ΠΕΡΙΣΣΟΤΕΡΑ
-                </h4>
-            </div>
-            <div class="erga float-left ml-20 text-whit mb-20 ">
-                <img src="./images/leo.png " class="w-260 h-200 ">
-                <h2 class="w-300 "> Ο παραδοσιακός οικισμός του Λεωνιδίου</h2>
-                <p class="w-300 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
-                <div class="bar mine w-24 border-b-3 border-red-600 inline-block m-0 "></div>
-                <h4 class="mine inline-block m-0 text-12 text-whit font-bold text-center mx-0 mt-10 mb-30 ">ΠΕΡΙΣΣΟΤΕΡΑ
-                </h4>
-            </div>
-            <div class="erga float-left ml-20 text-whit mb-20 ">
-                <img src="./images/kunouria.png " class="w-260 h-200 ">
-                <h2 class="w-300 ">Κυνουρία, Εκεί που δεσπόζει ο Πάρνωνας</h2>
-                <p class="w-300 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
-                <div class="bar mine w-24 border-b-3 border-red-600 inline-block m-0 "></div>
-                <h4 class="mine inline-block m-0 text-12 text-whit font-bold text-center mx-0 mt-10 mb-30 ">ΠΕΡΙΣΣΟΤΕΡΑ
-                </h4>
-            </div>
-            <div class="erga float-left ml-20 text-whit mb-20 ">
-                <img src="./images/parka.png " class="w-260 h-200 ">
-                <h2 class="w-300 ">Οι ελληνικές πόλεις με τα καλύτερα πάρκα!</h2>
-                <p class="w-300 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
-                <div class="bar mine w-24 border-b-3 border-red-600 inline-block m-0 "></div>
-                <h4 class=" mine inline-block m-0 text-12 text-whit font-bold text-center mx-0 mt-10 mb-30 ">ΠΕΡΙΣΣΟΤΕΡΑ
-                </h4>
-            </div>
-            <div>
-                <button class="buttonn rounded border-1 text-whit text-14 w-140 h-40 inline-flex text-center justify-center un ">ΠΕΡΙΣΣΟΤΕΡΑ
-                </button>
-            </div>
 
-        </div>
-    </section>
+        </section>
 
 
-    <section class="container2 ">
-        <div class="conta m-0 pt-32 pr-20 pb-0 pl-20 ">
-            <h3 class="text-12 text-bluee no-underline font-bold text-center">ΕΠΙΚΟΙΝΩΝΙΑ</h3>
-            <hr>
-            <div class="box pb-34 ">
-                <label class="block text-grey text-12 no-underline mb-5 ">Ονοματεπώνυμο</label>
-                <input class="pl-40 h-46 w-full rounded border-1 border-gray-400 " type="text ">
-            </div>
-            <div class="box pb-34 ">
-                <label class="block text-grey text-12 no-underline mb-5 ">Τηλέφωνο</label>
-                <i class="fa fa-phone absolute mt-15 ml-15 " aria-hidden="true "></i>
-                <input class="pl-40 h-46 w-full rounded border-1 border-gray-400 " type="text ">
-            </div>
-            <div class="box pb-34 ">
-                <label class="block text-grey text-12 no-underline mb-5 ">Email</label>
-                <i class="fa fa-envelope-o absolute mt-15 ml-15 " aria-hidden="true "></i>
-                <input class="pl-40 h-46 w-full rounded border-1 border-gray-400 " type="email ">
-            </div>
-            <div class="box pb-34 ">
-                <label class="block text-grey text-12 no-underline mb-5 ">Μήνυμα</label>
-                <textarea class=" h-123 w-full rounded border-1 border-gray-400 " name="message "></textarea>
-            </div>
+        <section class="container2 md:w-640 lg:w-920 xl:w-1280 mx-auto ">
+            <div class="conta m-0 pt-32 pr-20 pb-0 pl-20 lg:pt-62 lg:pr-220 lg:pl-220 xl:pl-290 xl:pr-290 ">
+                <h3 class="text-12 text-bluee no-underline font-bold text-center ">ΕΠΙΚΟΙΝΩΝΙΑ</h3>
+                <hr class="hidden lg:block ">
+                <div class="box pb-34 ">
+                    <label class="block text-grey text-12 no-underline mb-5 ">Ονοματεπώνυμο</label>
+                    <input class="pl-40 h-46 w-full rounded border-1 border-gray-400 " type="text ">
+                </div>
+                <div class="box pb-34 ">
+                    <label class="block text-grey text-12 no-underline mb-5 ">Τηλέφωνο</label>
+                    <i class="fa fa-phone absolute mt-15 ml-15 " aria-hidden="true "></i>
+                    <input class="pl-40 h-46 w-full rounded border-1 border-gray-400 " type="text ">
+                </div>
+                <div class="box pb-34 ">
+                    <label class="block text-grey text-12 no-underline mb-5 ">Email</label>
+                    <i class="fa fa-envelope-o absolute mt-15 ml-15 " aria-hidden="true "></i>
+                    <input class="pl-40 h-46 w-full rounded border-1 border-gray-400 " type="email ">
+                </div>
+                <div class="box pb-34 ">
+                    <label class="block text-grey text-12 no-underline mb-5 ">Μήνυμα</label>
+                    <textarea class=" h-123 w-full rounded border-1 border-gray-400 " name="message "></textarea>
+                </div>
 
-            <hr>
-            <button class="text-whit font-bold rounded border-white w-130 h-50 float-right border-none bg-red-700 text-14 mt-32 mb-60 ">ΑΠΟΣΤΟΛΗ
-                <i class="fa fa-angle-right ml-5 " aria-hidden="true "></i>
+                <hr>
+                <button class="text-whit font-bold float-right frounded border-white w-130 h-50 border-none bg-red-700 text-14 mt-32 mb-60 lg:w-240 lg:h-50 lg:mt-21 ">ΑΠΟΣΤΟΛΗ
+                <i class="fa fa-angle-right ml-5 lg:ml-50 " aria-hidden="true "></i>
             </button>
 
 
 
-        </div>
+            </div>
 
 
-    </section>
+        </section>
 
-    <footer class="last clear-both mt-135 min-h-420 bg-blue-450">
-        <div>
-            <a href="/ " class="logo2 block pt-30 pb-20 "><img src="logo.svg " alt="Logo " class="w-140 h-140 m-auto "></a>
-        </div>
-        <div id="lastpic ">
-            <img src="./images/rat.png " class="w-262 h-23 block m-auto">
-        </div>
+        <footer class="last clear-both mt-135 min-h-420 bg-blue-450 ">
+            <div>
+                <a href="/ " class="logo2 block pt-30 pb-20 "><img src="logo.svg " alt="Logo " class="w-140 h-140 m-auto lg:w-180 lg:h-180 "></a>
+            </div>
+            <div id="lastpic ">
+                <img src="./images/rat.png " class="w-262 h-23 block m-auto ">
+            </div>
 
-        <nav id="icons ">
-            <ul class="menu-icons list-none flex items-center justify-between mt-30 mb-30 ml-20 mr-20">
-                <li><img src="./images/facebook.png " class="w-40 h-40 block m-auto"></li>
-                <li><img src="./images/twitter.png " class="w-40 h-40 block m-auto"></li>
-                <li><img src="./images/glinkedin.png " class="w-40 h-40 block m-auto"></li>
-                <li><img src="./images/instagram.png " class="w-40 h-40 block m-auto"></li>
-                <li><img src="./images/youtube.png " class="w-40 h-40 block m-auto"></li>
-            </ul>
+            <nav id="icons ">
+                <ul class="menu-icons list-none flex items-center justify-between mt-30 mb-30 sm:ml-20 sm:mr-20 md:mr-143 md:ml-143 lg:ml-365 lg:mr-365 xl:ml-500 xl:mr-500 xxl:ml-550 xxl:mr-550 ">
+                    <li><img src="./images/facebook.png " class="w-40 h-40 block m-auto "></li>
+                    <li><img src="./images/twitter.png " class="w-40 h-40 block m-auto "></li>
+                    <li><img src="./images/glinkedin.png " class="w-40 h-40 block m-auto "></li>
+                    <li><img src="./images/instagram.png " class="w-40 h-40 block m-auto "></li>
+                    <li><img src="./images/youtube.png " class="w-40 h-40 block m-auto "></li>
+                </ul>
 
 
 
-        </nav>
+            </nav>
 
-        <div class="main2 h-246 ">
+            <div class="main2 h-246 lg:h-30 ">
 
-            <ul class="main-menu2 my-0 mx-auto no-underline text-center p-0">
-                <li class="mb-20 "><a class="text-whit text-14 font-bold no-underline hover:text-redd" href="# ">Η
+                <ul class="main-menu2 my-0 mx-auto no-underline text-center p-0 lg:m-0 lg:flex lg:text-center lg:justify-between lg:pl-5 lg:pr-5 xl:pl-50 xl:pr-50 xxl:pl-180 xxl:pr-180 ">
+                    <li class="mb-20 "><a class="text-whit text-14 font-bold no-underline hover:text-redd " href="# ">Η
                         ΟΜΟΝΣΠΟΝΔΙΑ</a></li>
-                <li class="mb-20 "><a class="text-whit text-14 font-bold no-underline hover:text-redd" href="# ">ΑΡΚΑΔΩΝ
+                    <li class="mb-20 "><a class="text-whit text-14 font-bold no-underline hover:text-redd " href="# ">ΑΡΚΑΔΩΝ
                         ΕΡΓΑ</a> </li>
-                <li class="mb-20"><a class="text-whit text-14 font-bold no-underline hover:text-redd" href="# ">ΕΠΩΝΥΜΟΙ
+                    <li class="mb-20 "><a class="text-whit text-14 font-bold no-underline hover:text-redd " href="# ">ΕΠΩΝΥΜΟΙ
                         ΑΡΚΑΔΕΣ</a></li>
-                <li class="mb-20"><a class="text-whit text-14 font-bold no-underline hover:text-redd" href="# ">ΝΕΑ-ΕΝΗΜΕΡΩΣΗ</a></li>
-                <li class="mb-20"><a class="text-whit text-14 font-bold no-underline hover:text-redd" href="# ">ΕΠΙΣΚΕΨΗ
+                    <li class="mb-20 "><a class="text-whit text-14 font-bold no-underline hover:text-redd " href="# ">ΝΕΑ-ΕΝΗΜΕΡΩΣΗ</a></li>
+                    <li class="mb-20 "><a class="text-whit text-14 font-bold no-underline hover:text-redd " href="# ">ΕΠΙΣΚΕΨΗ
                         ΣΤΗΝ ΑΡΚΑΔΙΑ</a></li>
-                <li class="mb-20"><a class="text-whit text-14 font-bold no-underline hover:text-redd" href="# ">ΑΝΑΖΗΤΗΣΕΙΣ ΣΤΗΝ ΑΡΚΑΔΙΑ</a></li>
-                <li><a class="text-whit text-14 font-bold no-underline hover:text-redd" href="# ">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
-            </ul>
-        </div>
-        <p class="text-whit text-14 opacity-50 text-center pb-23 mt-50 "> &copy; 2018 Pan Arcadian Federation of America</p>
+                    <li class="mb-20 "><a class="text-whit text-14 font-bold no-underline hover:text-redd " href="# ">ΑΝΑΖΗΤΗΣΕΙΣ ΣΤΗΝ ΑΡΚΑΔΙΑ</a></li>
+                    <li><a class="text-whit text-14 font-bold no-underline hover:text-redd " href="# ">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+                </ul>
+            </div>
+            <p class="text-whit text-14 opacity-50 text-center pb-23 mt-50 lg:mt-8 lg:pb-14 "> &copy; 2018 Pan Arcadian Federation of America
+            </p>
 
-    </footer>
+        </footer>
 
 </body>
 
